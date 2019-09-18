@@ -1,0 +1,6 @@
+com/iconnect/demo/controller/DestinationDetailsRestController.class
+com/iconnect/demo/dao/DestinationDAOImpl.class
+com/iconnect/demo/dao/DestinationDAO.class
+com/iconnect/demo/domain/Destination.class
+com/iconnect/demo/service/DestinationServiceImpl.class
+com/iconnect/demo/service/DestinationService.class
