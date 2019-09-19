@@ -36,14 +36,14 @@ public class DestinationRestController {
 	 
 	@RequestMapping(value = "/destination", method = RequestMethod.GET,produces= {"application/json","application/xml"})
 	
-	public  @ResponseBody Destination listDestinations() {
+	public Destination listDestinations() {
 		return destination;
 	}
 	
 	
 @RequestMapping(value = "/allDestinationList", method = RequestMethod.GET,produces= {"application/json","application/xml"})
 	
-	public  @ResponseBody List<Destination> allDestinationsList() {
+	public List<Destination> allDestinationsList() {
 		List<Destination> destinationList = new ArrayList<Destination>();
 		destinationList = destinationService.listAll();
 		destinationList.add(destination);
