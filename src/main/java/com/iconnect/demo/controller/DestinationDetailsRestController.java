@@ -18,14 +18,14 @@ import com.iconnect.demo.service.DestinationService;
 
 @RestController
 public class DestinationDetailsRestController {
-	
+	@Autowired
 	private DestinationService destinationService;
 	 Destination destination;
-	@Autowired(required=true)
-	@Qualifier(value="destinationService")
-	public void setDestinationService(DestinationService ds){
-		this.destinationService = ds;
-	}
+//	@Autowired(required=true)
+//	@Qualifier(value="destinationService")
+//	public void setDestinationService(DestinationService ds){
+//		this.destinationService = ds;
+//	}
 	
 	 @PostConstruct
 	    private void postConstruct() {
@@ -36,14 +36,14 @@ public class DestinationDetailsRestController {
 	 
 	@RequestMapping(value = "/destination", method = RequestMethod.GET,produces= {"application/json","application/xml"})
 	
-	public  @ResponseBody Destination listDestinations() {
+	public Destination listDestinations() {
 		return destination;
 	}
 	
 	
 @RequestMapping(value = "/allDestinationList", method = RequestMethod.GET,produces= {"application/json","application/xml"})
 	
-	public  @ResponseBody List<Destination> allDestinationsList() {
+	public List<Destination> allDestinationsList() {
 		List<Destination> destinationList = new ArrayList<Destination>();
 		destinationList = destinationService.listDestinations();
 		destinationList.add(destination);
