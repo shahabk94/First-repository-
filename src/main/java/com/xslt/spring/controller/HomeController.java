@@ -25,7 +25,7 @@ public class HomeController {
     public ModelAndView viewXSLT(HttpServletRequest request,
             HttpServletResponse response) throws IOException {
         // builds absolute path of the XML file
-        String xmlFile = "resources/citizens.xml";
+        String xmlFile = "resources/feed1.xml";
         String contextPath = request.getServletContext().getRealPath("");
         String xmlFilePath = contextPath + File.separator + xmlFile;
          

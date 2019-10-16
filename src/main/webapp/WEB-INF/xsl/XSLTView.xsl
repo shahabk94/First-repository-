@@ -11,26 +11,14 @@
             </body>
         </html>
     </xsl:template>
-    <xsl:template match="citizens">
+    <xsl:template match="story">
         <table border="1" width="100%">
-            <xsl:for-each select="citizen">
+            <xsl:for-each select="story">
                 <tr>
                     <td>
-                        <xsl:value-of select="ssn" />
+                        <xsl:value-of select="summary-headline" />
                     </td>
-                    <td>                      
-                        <xsl:value-of select="firstname" />                      
-                    </td>
-                    <td>
-                        <xsl:value-of select="lastname" />
-                    </td>
-                    <td>
-                        <xsl:value-of select="role" />
-                    </td>
-                    <td>
-                        <xsl:value-of select="salary" />
-                    </td>
-                      
+                    
                 </tr>
             </xsl:for-each>
         </table>
