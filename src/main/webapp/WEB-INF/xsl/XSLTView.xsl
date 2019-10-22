@@ -6,21 +6,20 @@
         <html>
             <body>
                 <div align="center">
-                    <xsl:apply-templates />
-                </div>
+                <h2>Summary</h2>
+          <p><xsl:value-of select="//summary-headline"/></p>        
+        <table border="1">
+        <tr bgcolor="#9acd32">
+        <th>Attribution</th>
+        </tr>
+        <xsl:for-each select="//attribution">
+        <tr>
+        <td><xsl:value-of select="."/></td>
+        </tr>
+    </xsl:for-each>
+    </table>
+            </div>
             </body>
         </html>
-    </xsl:template>
-    <xsl:template match="story">
-        <table border="1" width="100%">
-            <xsl:for-each select="story">
-                <tr>
-                    <td>
-                        <xsl:value-of select="summary-headline" />
-                    </td>
-                    
-                </tr>
-            </xsl:for-each>
-        </table>
-    </xsl:template>
+    </xsl:template>  
 </xsl:stylesheet>
